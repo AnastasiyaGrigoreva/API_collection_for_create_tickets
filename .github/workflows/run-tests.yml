@@ -35,6 +35,11 @@ jobs:
         run: |
           newman run API_postman_collection_create_tickets.json -x -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html
 
+      - name: HTML Preview
+        id: html_preview
+        uses: pavi2410/html-preview-action@v2
+        with:
+          html_file: 'testResults/htmlreport.html'
 
       # Upload the contents of Test Results directory to workspace
       - name: Output the run Details
