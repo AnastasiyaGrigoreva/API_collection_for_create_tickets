@@ -13,4 +13,3 @@ jobs:
       - uses: matt-ball/newman-action@master
         with:
           collection: API_postman_collection_create_tickets.json
-          reporters: '["emojitrain"]'
